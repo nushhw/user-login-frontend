@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome</title>
+</head>
+<body>
+  <h1>Welcome, <span id="userEmail"></span>!</h1>
+  <script>
+    document.getElementById('userEmail').textContent = localStorage.getItem('userEmail') || 'User';
+  </script>
+</body>
+</html>

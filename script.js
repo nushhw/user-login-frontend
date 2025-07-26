@@ -5,7 +5,7 @@ document.getElementById('signupForm').addEventListener('submit', async function 
   const password = document.getElementById('password').value;
 
   try {
-    const res = await fetch('https://backendserverforloginpge.h2510079.repl.co/', {
+    const res = await fetch('https://backendsetup.h2510079.repl.co/signup', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password })
@@ -17,6 +17,7 @@ document.getElementById('signupForm').addEventListener('submit', async function 
       return;
     }
 
+    // On 3rd try = success
     localStorage.setItem('userEmail', email);
     window.location.href = "welcome.html";
 
